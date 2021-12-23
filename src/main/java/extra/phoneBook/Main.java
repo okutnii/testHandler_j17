@@ -18,7 +18,7 @@ public class Main {
         List<String> entryList = readData(entryPath);
 
         performLinear(sourcePath, entryList);
-        performBubbleAndJump(sourcePath, entryList);
+        //performBubbleAndJump(sourcePath, entryList);
         performQuickAndBinary(sourcePath, entryList);
         performHash(sourcePath, entryList);
     }

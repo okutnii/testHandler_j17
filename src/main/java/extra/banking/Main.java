@@ -10,6 +10,14 @@ public class Main {
     static {
         scanner = new Scanner(System.in);
     }
+    public static void createNewDatabase(String fileName) {
+        String url = "jdbc:sqlite:" + fileName;
+
+        try (Connection conn = DriverManager.getConnection(url)) {
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
     public static void createNewTable(String fileName) {
         String url = "jdbc:sqlite:" + fileName;
@@ -34,8 +42,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String dbName = getDataBaseName(args);  // db.s3db
+        String dbName = getDataBaseName(args); //  getDataBaseName(args);  // db.s3db
 
+        createNewDatabase(dbName);
         createNewTable(dbName);
 
         start("jdbc:sqlite:" + dbName);
@@ -45,7 +54,7 @@ public class Main {
 
     private static String getDataBaseName(String[] args) {
         for (int i = 0; i < args.length - 1; i++) {
-            if (args[i].equals("-fileName"))
+            if (args[i].equals("--fileName"))
                 return args[i+1];
         }
 

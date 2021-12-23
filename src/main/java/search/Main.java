@@ -143,15 +143,6 @@ public class Main {
             case NONE   -> findNone (data, dataMap, target);
         };
 
-
-        List<Integer> indexes = dataMap.get(target);
-
-        if(indexes != null) {
-
-            for (int i : indexes)
-                results.add(data.get(i));
-        }
-
         return results;
     }
 
