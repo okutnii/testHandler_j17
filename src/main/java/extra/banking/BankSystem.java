@@ -41,7 +41,7 @@ class BankSystem {
         }
     }
 
-    public Card createAccount() {
+    public void createAccount() {
 
         Card card = generateCard();
 
@@ -53,7 +53,6 @@ class BankSystem {
         System.out.println("Your card PIN:");
         System.out.println(card.getPin());
 
-        return card;
     }
 
     private Card generateCard() {
@@ -113,7 +112,6 @@ class BankSystem {
 
     private void cardMenu(Card card, Scanner scanner) {
 
-
         while (true) {
             System.out.println("1. Balance");
             System.out.println("2. Add income");
@@ -155,7 +153,7 @@ class BankSystem {
                     return;
                 }
                 case 5 -> {
-                    logOut(scanner);
+                    logOut();
                     return;
                 }
                 case 0 -> {
@@ -166,8 +164,6 @@ class BankSystem {
                 default -> System.out.println("Invalid item.");
             }
         }
-
-
     }
 
     private void closeCard(Card card) {
@@ -255,7 +251,7 @@ class BankSystem {
         System.out.println("Balance: " + balance);
     }
 
-    private void logOut(Scanner scanner) {
+    private void logOut() {
 
         System.out.println("You have successfully logged out!");
     }
