@@ -5,7 +5,6 @@ class Card {
     private final int id;
     private final String codeNumber;
     private final String pin;
-
     private final int balance;
 
 
@@ -13,15 +12,13 @@ class Card {
         this.pin = pin;
         this.codeNumber = bin + ai + checksum;
         this.balance = 0;
-
         this.id = idCounter++;
     }
 
-    public Card(String number, String pin, int balance,int id) {
+    public Card(String number, String pin, int balance, int id) {
         this.pin = pin;
         this.codeNumber = number;
         this.balance = balance;
-
         this.id = id;
     }
 
@@ -29,7 +26,7 @@ class Card {
         return id;
     }
 
-    public boolean canTransfer(int val){
+    public boolean canTransfer(int val) {
         return balance - val >= 0;
     }
 

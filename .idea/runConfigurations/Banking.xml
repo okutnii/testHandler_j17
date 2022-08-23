@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Banking" type="Application" factoryName="Application">
     <option name="ALTERNATIVE_JRE_PATH" value="jbr-11" />
-    <option name="MAIN_CLASS_NAME" value="extra.banking.Main" />
+    <option name="MAIN_CLASS_NAME" value="extra.banking.BankMain" />
     <module name="jet-projs" />
     <option name="PROGRAM_PARAMETERS" value="--fileName db.s3db" />
     <method v="2">
